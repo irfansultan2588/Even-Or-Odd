@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Even Or Odd</title>
+  </head>
+  <body>
+    <form onsubmit="calculate(); return false">
+      <label for="numbercheck">Write Number</label>
+      <input type="number" min="1" required id="evenodd" />
+      <button type="submit">Check</button>
+    </form>
+    <h1 id="result"></h1>
+    <h1 id="show"></h1>
+
+    <script>
+      function calculate() {
+        let num = document.querySelector(`#evenodd`).value;
+        let result = num % 2;
+        document.querySelector(`#result`).innerHTML = "Your Answer " + result;
+        document.querySelector(`#show`).innerHTML =
+          "YOUR ANSWER IS = 0 YOUR NUMBER IS EVEN OTHERWISE ODD";
+      }
+    </script>
+  </body>
+</html>
